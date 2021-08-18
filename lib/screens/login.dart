@@ -175,7 +175,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Center(
                   child: SizedBox(
                     height: screenHeight * 0.07,
-                    width: screenWidth * 0.8,
+                    width: screenWidth * 0.9,
                     child: TextButton(
                       onPressed: () {},
                       child: Text(
@@ -183,7 +183,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         textAlign: TextAlign.center,
                         style: GoogleFonts.montserrat(
                           color: AppColors.darkblue,
-                          fontSize: 18.0,
+                          fontSize: 14.0,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -205,7 +205,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     textAlign: TextAlign.center,
                     style: GoogleFonts.montserrat(
                       color: AppColors.white,
-                      fontSize: 18.0,
+                      fontSize: 14.0,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -216,7 +216,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Center(
                   child: SizedBox(
                     height: screenHeight * 0.07,
-                    width: screenWidth * 0.8,
+                    width: screenWidth * 0.9,
                     child: TextButton(
                       onPressed: () {},
                       child: Text(
@@ -224,7 +224,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         textAlign: TextAlign.center,
                         style: GoogleFonts.montserrat(
                           color: AppColors.white,
-                          fontSize: 18.0,
+                          fontSize: 14.0,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
