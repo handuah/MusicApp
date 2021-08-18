@@ -176,7 +176,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     height: screenHeight * 0.07,
                     width: screenWidth * 0.8,
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/signup');
+                      },
                       child: Text(
                         'Create New Account',
                         textAlign: TextAlign.center,
