@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/screens/login.dart';
 import 'package:music_app/screens/startScreen.dart';
 import 'package:music_app/screens/welcomeScreen.dart';
 
@@ -15,6 +16,7 @@ class MusicApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/welcomeScreen': (context) => WelcomeScreen(),
+        '/login': (context) => LoginScreen(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
