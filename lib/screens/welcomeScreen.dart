@@ -147,7 +147,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     height: screenHeight * 0.07,
                     width: screenWidth * 0.8,
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/login');
+                      },
                       child: Text(
                         'Login',
                         textAlign: TextAlign.center,
