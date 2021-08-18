@@ -19,42 +19,47 @@ class _StartScreenState extends State<StartScreen> {
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: AppColors.darkerblue,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Stack(
-              children: [
-                FaIcon(
-                  FontAwesomeIcons.play,
-                  color: AppColors.white,
-                  size: 80.0,
-                ),
-                Positioned(
-                  top: screenHeight * 0.035,
-                  left: screenWidth * 0.05,
-                  child: FaIcon(
+      body: GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, '/welcomeScreen');
+        },
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Stack(
+                children: [
+                  FaIcon(
                     FontAwesomeIcons.play,
-                    color: AppColors.darkblue.withOpacity(0.8),
-                    size: 55.0,
+                    color: AppColors.white,
+                    size: 80.0,
                   ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: screenHeight * 0.02,
-            ),
-            Text(
-              'MusicApp',
-              textAlign: TextAlign.center,
-              style: GoogleFonts.montserrat(
-                color: AppColors.white,
-                fontSize: 24.0,
-                fontWeight: FontWeight.bold,
+                  Positioned(
+                    top: screenHeight * 0.035,
+                    left: screenWidth * 0.05,
+                    child: FaIcon(
+                      FontAwesomeIcons.play,
+                      color: AppColors.darkblue.withOpacity(0.8),
+                      size: 55.0,
+                    ),
+                  ),
+                ],
               ),
-            ),
-          ],
+              SizedBox(
+                height: screenHeight * 0.02,
+              ),
+              Text(
+                'MusicApp',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.montserrat(
+                  color: AppColors.white,
+                  fontSize: 24.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
