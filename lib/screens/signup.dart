@@ -216,20 +216,64 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 SizedBox(
                   height: screenHeight * 0.04,
                 ),
+                // Center(
+                //   child: Container(
+                //     height: screenHeight * 0.05,
+                //     width: screenWidth * 0.8,
+                //     // color: Colors.green,
+                //     child: Text(
+                //       'By continuing, you agree to our Terms of Service and Privacy Policy.',
+                //       textAlign: TextAlign.center,
+                //       style: GoogleFonts.montserrat(
+                //         // height: screenHeight * 0.0001,
+                //         color: AppColors.white.withOpacity(0.5),
+                //         fontSize: 12.0,
+                //         fontWeight: FontWeight.normal,
+                //       ),
+                //     ),
+                //   ),
+                // ),
                 Center(
                   child: Container(
                     height: screenHeight * 0.05,
                     width: screenWidth * 0.8,
-                    // color: Colors.green,
-                    child: Text(
+                    child: EasyRichText(
                       'By continuing, you agree to our Terms of Service and Privacy Policy.',
                       textAlign: TextAlign.center,
-                      style: GoogleFonts.montserrat(
-                        // height: screenHeight * 0.0001,
-                        color: AppColors.white.withOpacity(0.5),
-                        fontSize: 12.0,
-                        fontWeight: FontWeight.normal,
-                      ),
+                      patternList: [
+                        EasyRichTextPattern(
+                          targetString: 'By continuing, you agree to our',
+                          style: GoogleFonts.montserrat(
+                            color: AppColors.white.withOpacity(0.5),
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                        EasyRichTextPattern(
+                          targetString: 'Terms of Service',
+                          style: GoogleFonts.montserrat(
+                            color: AppColors.lightblue,
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        EasyRichTextPattern(
+                          targetString: 'and',
+                          style: GoogleFonts.montserrat(
+                            color: AppColors.white.withOpacity(0.5),
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                        EasyRichTextPattern(
+                          targetString: 'Privacy Policy',
+                          style: GoogleFonts.montserrat(
+                            color: AppColors.lightblue,
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
