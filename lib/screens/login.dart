@@ -127,6 +127,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             fontWeight: FontWeight.normal,
                           ),
                           decoration: InputDecoration(
+                            hintText: 'handuah@gmail.com',
+                            hintStyle: GoogleFonts.montserrat(
+                              color: AppColors.white.withOpacity(0.5),
+                            ),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color: AppColors.white,
@@ -158,6 +162,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             fontWeight: FontWeight.normal,
                           ),
                           decoration: InputDecoration(
+                            hintText: '************',
+                            hintStyle: GoogleFonts.montserrat(
+                              color: AppColors.white.withOpacity(0.5),
+                            ),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color: AppColors.white,
