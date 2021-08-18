@@ -36,13 +36,23 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       ),
                       fit: BoxFit.cover,
                     ),
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(40.0),
+                      bottomRight: Radius.circular(40.0),
+                    ),
                   ),
                   child: Stack(
                     children: [
                       Container(
                         height: screenHeight * 0.6,
                         width: screenWidth,
-                        color: AppColors.black.withOpacity(0.5),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(40.0),
+                            bottomRight: Radius.circular(40.0),
+                          ),
+                          color: AppColors.black.withOpacity(0.5),
+                        ),
                       ),
                       Center(
                         child: Column(
