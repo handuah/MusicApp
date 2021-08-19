@@ -6,6 +6,7 @@ class TrendingMusic {
       "artistName": "The Weekend",
       "albumName": "Blinding Lights",
       "songName": "Save Your Tears",
+      "imgTag": "theWeekend"
     },
     {
       "albumImgPath":
@@ -13,12 +14,14 @@ class TrendingMusic {
       "artistName": "Billie Eilish",
       "albumName": "Happier Than Ever",
       "songName": "Lost Cause",
+      "imgTag": "billie"
     },
     {
       "albumImgPath": "https://i1.wp.com/i.imgur.com/pnfIdJ6.jpg",
       "artistName": "Shreya Ghoshal",
       "albumName": "Hum Adhuri Kahani",
       "songName": "Hasi Ban Gaye",
+      "imgTag": "shreya"
     },
     {
       "albumImgPath":
@@ -26,6 +29,7 @@ class TrendingMusic {
       "artistName": "BTS",
       "albumName": "Butter",
       "songName": "Butter",
+      "imgTag": "bts"
     },
     {
       "albumImgPath":
@@ -33,6 +37,7 @@ class TrendingMusic {
       "artistName": "Ed Sheeran",
       "albumName": "Bad Habits",
       "songName": "Bad Habits",
+      "imgTag": "edsheeran"
     },
     {
       "albumImgPath":
@@ -40,6 +45,7 @@ class TrendingMusic {
       "artistName": "The Kid Laroi",
       "albumName": "Fuck Love 3+",
       "songName": "Stay",
+      "imgTag": "thekid"
     },
   ];
 }
