@@ -185,7 +185,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: screenHeight * 0.07,
                     width: screenWidth * 0.9,
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/home');
+                      },
                       child: Text(
                         'Login',
                         textAlign: TextAlign.center,
