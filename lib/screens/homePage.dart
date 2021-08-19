@@ -105,6 +105,54 @@ class _HomePageState extends State<HomePage> {
                   _trendingMusicCard(trendingCtxt, trendMusInt),
             ),
           ),
+          SizedBox(
+            height: screenHeight * 0.04,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                'Popular Songs',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.montserrat(
+                  color: AppColors.white,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                '',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.montserrat(
+                  color: AppColors.white,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: screenHeight * 0.02,
+          ),
+          Container(
+            height: screenHeight * 0.26,
+            width: screenWidth,
+            decoration: BoxDecoration(
+                // color: Colors.red,
+                ),
+            child: ListView.separated(
+              // padding: EdgeInsets.only(
+              //     bottom: screenHeight * 0.02, top: screenHeight * 0.01),
+              separatorBuilder: (BuildContext context, int index) => SizedBox(
+                width: screenWidth * 0.05,
+              ), //add a separater to the list
+              scrollDirection: Axis.horizontal,
+              itemCount: artisticDetails.length,
+              itemBuilder: (BuildContext popularCtxt, int popMusInt) =>
+                  _popularMusicCard(popularCtxt, popMusInt),
+            ),
+          ),
         ],
       ),
     );
@@ -158,6 +206,70 @@ class _HomePageState extends State<HomePage> {
               ),
               Text(
                 artisticDetails[trendMusInt]['albumName'],
+                // 'Blinding Lights',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.montserrat(
+                  color: AppColors.white,
+                  fontSize: 12.0,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  // POPULAR SONGS CARD
+  Widget _popularMusicCard(BuildContext popularCtxt, int popMusInt) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Stack(
+          children: [
+            Container(
+              height: screenHeight * 0.18,
+              width: screenWidth * 0.34,
+              decoration: BoxDecoration(
+                color: Colors.green,
+                borderRadius: BorderRadius.circular(15.0),
+                image: DecorationImage(
+                  image: NetworkImage(
+                    artisticDetails[popMusInt]['albumImgPath'],
+                    // 'https://www.pluggedin.com/wp-content/uploads/2021/01/Weeknd-Blinding-Lights-WP.jpg',
+                  ),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: screenHeight * 0.01,
+        ),
+        Center(
+          // right: screenWidth * 0.04,
+          // bottom: screenHeight * 0.02,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                artisticDetails[popMusInt]['artistName'],
+                // 'The Weekend',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.montserrat(
+                  color: AppColors.white,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                artisticDetails[popMusInt]['albumName'],
                 // 'Blinding Lights',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.montserrat(
