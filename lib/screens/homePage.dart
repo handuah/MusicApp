@@ -153,6 +153,54 @@ class _HomePageState extends State<HomePage> {
                   _popularMusicCard(popularCtxt, popMusInt),
             ),
           ),
+          SizedBox(
+            height: screenHeight * 0.04,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                'New Songs',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.montserrat(
+                  color: AppColors.white,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                '',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.montserrat(
+                  color: AppColors.white,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: screenHeight * 0.02,
+          ),
+          Container(
+            height: screenHeight * 0.26,
+            width: screenWidth,
+            decoration: BoxDecoration(
+                // color: Colors.red,
+                ),
+            child: ListView.separated(
+              // padding: EdgeInsets.only(
+              //     bottom: screenHeight * 0.02, top: screenHeight * 0.01),
+              separatorBuilder: (BuildContext context, int index) => SizedBox(
+                width: screenWidth * 0.05,
+              ), //add a separater to the list
+              scrollDirection: Axis.horizontal,
+              itemCount: artisticDetails.length,
+              itemBuilder: (BuildContext popularCtxt, int popMusInt) =>
+                  _popularMusicCard(popularCtxt, popMusInt),
+            ),
+          ),
         ],
       ),
     );
