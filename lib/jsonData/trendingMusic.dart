@@ -2,6 +2,14 @@ class TrendingMusic {
   static final getData = [
     {
       "albumImgPath":
+          "https://images.genius.com/ae6d0db2997830961b8063eeb9af76ed.1000x1000x1.jpg",
+      "artistName": "Taeyeon",
+      "albumName": "#GirlSpkOut",
+      "songName": "Be Real",
+      "imgTag": "taetae"
+    },
+    {
+      "albumImgPath":
           "https://www.pluggedin.com/wp-content/uploads/2021/01/Weeknd-Blinding-Lights-WP.jpg",
       "artistName": "The Weekend",
       "albumName": "Blinding Lights",
