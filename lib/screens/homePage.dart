@@ -279,18 +279,23 @@ class _HomePageState extends State<HomePage> {
       children: [
         Stack(
           children: [
-            Container(
-              height: screenHeight * 0.18,
-              width: screenWidth * 0.34,
-              decoration: BoxDecoration(
-                color: Colors.green,
-                borderRadius: BorderRadius.circular(15.0),
-                image: DecorationImage(
-                  image: NetworkImage(
-                    artisticDetails[popMusInt]['albumImgPath'],
-                    // 'https://www.pluggedin.com/wp-content/uploads/2021/01/Weeknd-Blinding-Lights-WP.jpg',
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/playMusic');
+              },
+              child: Container(
+                height: screenHeight * 0.18,
+                width: screenWidth * 0.34,
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                  borderRadius: BorderRadius.circular(15.0),
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      artisticDetails[popMusInt]['albumImgPath'],
+                      // 'https://www.pluggedin.com/wp-content/uploads/2021/01/Weeknd-Blinding-Lights-WP.jpg',
+                    ),
+                    fit: BoxFit.cover,
                   ),
-                  fit: BoxFit.cover,
                 ),
               ),
             ),
