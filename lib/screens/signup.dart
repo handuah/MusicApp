@@ -285,7 +285,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     height: screenHeight * 0.07,
                     width: screenWidth * 0.9,
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/home');
+                      },
                       child: Text(
                         'Sign up',
                         textAlign: TextAlign.center,
