@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/screens/login.dart';
 import 'package:music_app/screens/mainPageContainer.dart';
+import 'package:music_app/screens/playMusic.dart';
 import 'package:music_app/screens/signup.dart';
 import 'package:music_app/screens/startScreen.dart';
 import 'package:music_app/screens/welcomeScreen.dart';
@@ -21,6 +22,7 @@ class MusicApp extends StatelessWidget {
         '/login': (context) => LoginScreen(),
         '/signup': (context) => SignUpScreen(),
         '/home': (context) => MainPageContainer(),
+        '/playMusic': (context) => PlayMusic(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
