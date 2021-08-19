@@ -27,7 +27,6 @@ class _MainPageContainerState extends State<MainPageContainer> {
           HomePage(),
           HomePage(),
           HomePage(),
-          HomePage(),
         ],
         onPageChanged: (page) {
           setState(() {
@@ -36,33 +35,21 @@ class _MainPageContainerState extends State<MainPageContainer> {
         },
       ),
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 4.0,
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.transparent,
         items: [
           BottomNavigationBarItem(
             // backgroundColor: Colors.red,
             icon: Icon(
               FontAwesomeIcons.home,
-              color: Colors.grey,
+              color: AppColors.white.withOpacity(0.5),
               size: 26.0,
             ),
-            label: 'Home',
+            label: '',
             // title: Text('Dashboard'),
             activeIcon: Icon(
               FontAwesomeIcons.home,
-              color: AppColors.darkerblue,
-              size: 26.0,
-            ),
-          ),
-          BottomNavigationBarItem(
-            // backgroundColor: Colors.red,
-            icon: Icon(
-              FontAwesomeIcons.ticketAlt,
-              color: HexColor('#2c2c2c'),
-              size: 26.0,
-            ),
-            label: 'Vouchers',
-            // title: Text('Dashboard'),
-            activeIcon: Icon(
-              FontAwesomeIcons.ticketAlt,
               color: AppColors.white,
               size: 26.0,
             ),
@@ -70,14 +57,14 @@ class _MainPageContainerState extends State<MainPageContainer> {
           BottomNavigationBarItem(
             // backgroundColor: Colors.red,
             icon: Icon(
-              FontAwesomeIcons.heart,
-              color: HexColor('#2c2c2c'),
+              FontAwesomeIcons.search,
+              color: AppColors.white.withOpacity(0.5),
               size: 26.0,
             ),
             label: '',
             // title: Text('Dashboard'),
             activeIcon: Icon(
-              FontAwesomeIcons.heart,
+              FontAwesomeIcons.search,
               color: AppColors.white,
               size: 26.0,
             ),
@@ -85,14 +72,14 @@ class _MainPageContainerState extends State<MainPageContainer> {
           BottomNavigationBarItem(
             // backgroundColor: Colors.red,
             icon: Icon(
-              FontAwesomeIcons.locationArrow,
-              color: HexColor('#2c2c2c'),
+              FontAwesomeIcons.book,
+              color: AppColors.white.withOpacity(0.5),
               size: 26.0,
             ),
             label: '',
             // title: Text('Dashboard'),
             activeIcon: Icon(
-              FontAwesomeIcons.locationArrow,
+              FontAwesomeIcons.book,
               color: AppColors.white,
               size: 26.0,
             ),
