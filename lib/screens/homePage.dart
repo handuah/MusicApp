@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
                   textAlign: TextAlign.center,
                   style: GoogleFonts.montserrat(
                     color: AppColors.white,
-                    fontSize: 24.0,
+                    fontSize: 26.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -49,14 +49,46 @@ class _HomePageState extends State<HomePage> {
                     maxRadius: 28.0,
                     backgroundImage: NetworkImage(
                         'https://media-exp1.licdn.com/dms/image/C4D03AQHBc2B31Q5YBA/profile-displayphoto-shrink_400_400/0/1592216299456?e=1634774400&v=beta&t=SLpzcedjDr5KFAWiO6VKptTNmw0FjuicRTXqLmJh8EY'),
-                    // child: Image(
-                    //   image: NetworkImage(
-                    //     'https://media-exp1.licdn.com/dms/image/C4D03AQHBc2B31Q5YBA/profile-displayphoto-shrink_400_400/0/1592216299456?e=1634774400&v=beta&t=SLpzcedjDr5KFAWiO6VKptTNmw0FjuicRTXqLmJh8EY',
-                    //   ),
-                    // ),
                   ),
                 ),
               ],
+            ),
+          ),
+          SizedBox(
+            height: screenHeight * 0.04,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                'Trending Music',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.montserrat(
+                  color: AppColors.white,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'View All',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.montserrat(
+                  color: AppColors.white,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: screenHeight * 0.02,
+          ),
+          Container(
+            height: screenHeight * 0.2,
+            width: screenWidth,
+            decoration: BoxDecoration(
+              color: Colors.red,
             ),
           ),
         ],
