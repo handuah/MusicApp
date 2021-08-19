@@ -90,6 +90,41 @@ class _HomePageState extends State<HomePage> {
             decoration: BoxDecoration(
               color: Colors.red,
             ),
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                Container(
+                  height: screenHeight * 0.2,
+                  width: screenWidth * 0.8,
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                ),
+                SizedBox(
+                  width: screenWidth * 0.04,
+                ),
+                Container(
+                  height: screenHeight * 0.2,
+                  width: screenWidth * 0.8,
+                  decoration: BoxDecoration(
+                    color: Colors.yellow,
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                ),
+                SizedBox(
+                  width: screenWidth * 0.04,
+                ),
+                Container(
+                  height: screenHeight * 0.2,
+                  width: screenWidth * 0.8,
+                  decoration: BoxDecoration(
+                    color: Colors.yellow,
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
