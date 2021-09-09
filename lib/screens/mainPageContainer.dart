@@ -16,7 +16,14 @@ class MainPageContainer extends StatefulWidget {
 
 class _MainPageContainerState extends State<MainPageContainer> {
   final PageController _pageController = PageController();
-  int _selectedIndex = 0;
+  int _selectedTabIndex = 0;
+
+  // When user tap on one of the navigation item
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedTabIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +38,13 @@ class _MainPageContainerState extends State<MainPageContainer> {
         ],
         onPageChanged: (page) {
           setState(() {
-            _selectedIndex = page;
+            _selectedTabIndex = page;
           });
         },
       ),
       bottomNavigationBar: BottomNavigationBar(
+        onTap: _onItemTapped,
+        currentIndex: _selectedTabIndex,
         elevation: 4.0,
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.transparent,
