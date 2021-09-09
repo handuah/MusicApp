@@ -17,6 +17,7 @@ class _HomePageState extends State<HomePage> {
   var artisticDetails = TrendingMusic.getData;
 
   @override
+  // MAIN PAGE WIDGET
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
