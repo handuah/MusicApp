@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:music_app/screens/LibraryPage.dart';
 import 'package:music_app/screens/homePage.dart';
 import 'package:music_app/screens/searchPage.dart';
 import 'package:music_app/styles/colors.dart';
@@ -34,7 +35,7 @@ class _MainPageContainerState extends State<MainPageContainer> {
         children: [
           HomePage(),
           SearchPage(),
-          HomePage(),
+          LibraryPage(),
         ],
         onPageChanged: (page) {
           setState(() {
