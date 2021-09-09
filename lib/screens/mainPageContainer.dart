@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:music_app/screens/homePage.dart';
+import 'package:music_app/screens/searchPage.dart';
 import 'package:music_app/styles/colors.dart';
 
 class MainPageContainer extends StatefulWidget {
@@ -25,7 +26,7 @@ class _MainPageContainerState extends State<MainPageContainer> {
         controller: _pageController,
         children: [
           HomePage(),
-          HomePage(),
+          SearchPage(),
           HomePage(),
         ],
         onPageChanged: (page) {
