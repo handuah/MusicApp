@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart'
 // import 'package:hexcolor/hexcolor.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,6 +17,7 @@ class LibraryPage extends StatefulWidget {
 class _LibraryPageState extends State<LibraryPage> {
   // initializing artist data
   var searchArtist = TrendingMusic.getData;
+  // bool tapped = false;
 
   @override
   Widget build(BuildContext context) {
@@ -56,50 +58,53 @@ class _LibraryPageState extends State<LibraryPage> {
                 children: [
                   Container(
                     child: TabBar(
+                      labelPadding: EdgeInsets.symmetric(
+                        horizontal: screenWidth * 0.01,
+                      ),
                       indicatorColor: AppColors.lighterblue,
                       labelColor: AppColors.white,
                       unselectedLabelColor: AppColors.white,
                       tabs: [
                         Tab(
                           child: Text(
-                            'Library',
+                            'Favourites',
                             textAlign: TextAlign.left,
                             style: GoogleFonts.montserrat(
                               color: AppColors.white,
-                              fontSize: 16.0,
+                              fontSize: 14.0,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),
                         Tab(
                           child: Text(
-                            'Library',
+                            'Playlists',
                             textAlign: TextAlign.left,
                             style: GoogleFonts.montserrat(
                               color: AppColors.white,
-                              fontSize: 16.0,
+                              fontSize: 14.0,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),
                         Tab(
                           child: Text(
-                            'Library',
+                            'Albums',
                             textAlign: TextAlign.left,
                             style: GoogleFonts.montserrat(
                               color: AppColors.white,
-                              fontSize: 16.0,
+                              fontSize: 14.0,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),
                         Tab(
                           child: Text(
-                            'Library',
+                            'Artists',
                             textAlign: TextAlign.left,
                             style: GoogleFonts.montserrat(
                               color: AppColors.white,
-                              fontSize: 16.0,
+                              fontSize: 14.0,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -110,44 +115,36 @@ class _LibraryPageState extends State<LibraryPage> {
                 ],
               ),
             ),
-            // TextFormField(
-            //   keyboardType: TextInputType.emailAddress,
-            //   textInputAction: TextInputAction.next,
-            //   style: GoogleFonts.montserrat(
-            //     color: AppColors.white.withOpacity(0.8),
-            //     fontSize: 18.0,
-            //     fontWeight: FontWeight.normal,
-            //   ),
-            //   decoration: InputDecoration(
-            //     prefixIcon: Icon(
-            //       Icons.search,
-            //       color: AppColors.darkerblue.withOpacity(0.5),
-            //     ),
-            //     hintText: 'Song name, artistes, albums',
-            //     hintStyle: GoogleFonts.montserrat(
-            //       color: AppColors.darkblue.withOpacity(0.5),
-            //     ),
-            //     enabledBorder: OutlineInputBorder(
-            //       borderSide: BorderSide(
-            //         color: AppColors.white,
-            //       ),
-            //       borderRadius: BorderRadius.circular(20.0),
-            //     ),
-            //     fillColor: AppColors.white,
-            //     filled: true,
-            //   ),
-            // ),
             SizedBox(
               height: screenHeight * 0.03,
             ),
-            Text(
-              'Recent',
-              textAlign: TextAlign.left,
-              style: GoogleFonts.montserrat(
-                color: AppColors.white,
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Icon(
+                      Icons.shuffle,
+                      color: AppColors.white,
+                    ),
+                    Text(
+                      'Shuffle',
+                      textAlign: TextAlign.left,
+                      style: GoogleFonts.montserrat(
+                        color: AppColors.white,
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+                FaIcon(
+                  FontAwesomeIcons.borderAll,
+                  color: AppColors.white,
+                ),
+              ],
             ),
             SizedBox(
               height: screenHeight * 0.03,
@@ -176,6 +173,7 @@ class _LibraryPageState extends State<LibraryPage> {
   Widget _recentSearchCard(BuildContext recentContext, int recentSearchInt) {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
+    bool tapped = false;
     return Container(
       width: screenWidth,
       height: screenHeight * 0.16,
@@ -248,15 +246,37 @@ class _LibraryPageState extends State<LibraryPage> {
             // SizedBox(
             //   width: screenWidth * 0.2,
             // ),
-            Text(
-              '3:57',
-              textAlign: TextAlign.left,
-              style: GoogleFonts.montserrat(
-                color: AppColors.white,
-                fontSize: 12.0,
-                fontWeight: FontWeight.normal,
-              ),
-            ),
+            // GestureDetector(
+            //   onDoubleTap: () {
+            //     setState(() {
+            //       tapped = !tapped;
+            //     });
+            //   },
+            //   child: tapped
+            //       ? Icon(
+            //           Icons.favorite,
+            //           color: AppColors.white,
+            //         )
+            //       : Icon(
+            //           Icons.favorite_outline,
+            //           color: AppColors.white,
+            //         ),
+            // ),
+            IconButton(
+                icon: tapped
+                    ? Icon(
+                        Icons.favorite,
+                        color: AppColors.white,
+                      )
+                    : Icon(
+                        Icons.favorite_outline,
+                        color: AppColors.white,
+                      ),
+                onPressed: () {
+                  setState(() {
+                    tapped = !tapped;
+                  });
+                }),
           ],
         ),
       ),
